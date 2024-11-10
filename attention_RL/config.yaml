@@ -1,0 +1,44 @@
+model:
+  name: Attention_SAC_v5
+  remarks: MAX speed set to 10m/s
+  reward_func: type6_v8
+  include_context: True
+  # state_encoder_info: "1 LSTM, single head attention with masking"
+  # context_encoder_info: "ContextCNN_v2"
+  # context_info: "dgm, waypoints, only current timesteps"
+  # state_info: "added goal position and speed limit"
+
+action_adapter:
+  max_speed: 10
+
+PPO: 
+  batch_size: 128
+  n_steps: 6144
+  learning_rate: 7.5e-5
+  ent_coef: 0.01
+  target_kl: 0.05
+  seed: 24
+
+SAC:
+  batch_size: 64
+  buffer_size: 1000000
+  ent_coef: "auto"
+  ent_scheduler: false
+  learning_starts: 5000
+  lr: 0.0003
+  seed: 1
+
+env:
+  num_envs: 6
+  scenario: [10]
+
+train:
+  timesteps: 50688
+  num_epochs: 60
+  seed: 1   #env seed (model seeds overwrites this if provided)
+  device: 'cuda:0'
+
+eval:
+  episodes: 50
+  num_envs: 1
+  eval_seed: 1
