@@ -5,15 +5,15 @@ eval_eps: 50    #eval episodes per seed
 num_seeds: 5
 pred_mode: deterministic
 
-model_name: Attention_SAC_v5_hyp4
+model_name: Attention_SAC
 safety_mode: False
 remarks: "best checkpoint, modified waypoints"
-## provide absolute path
-model_path: /home/airl-gpu5-mini/Jayabrata/Sumit/main_branch/Attention_planning/attention_RL/logs/scenario-10/modified_waypoints/state_n_context/type6_v8/Attention_SAC_v5_seed-1_hyp4/24-Apr-24/12-29-50/checkpoints/Attention_SAC_v5_557568_steps.zip
-checkpoint: 557568
+
+## recommended to provide absolute path
+model_path: "-"
+checkpoint: 0   #number of timesteps the model is trained for
 
 context: True
-reward_func: "type6_v8"
+reward_func: "dense"
 interface_version: 4
-wrapper_version: 3
 max_speed: 10

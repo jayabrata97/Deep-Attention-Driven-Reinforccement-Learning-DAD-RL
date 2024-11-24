@@ -1,12 +1,8 @@
 model:
-  name: Attention_SAC_v5
+  name: Attention_SAC
   remarks: MAX speed set to 10m/s
-  reward_func: type6_v8
+  reward_func: dense
   include_context: True
-  # state_encoder_info: "1 LSTM, single head attention with masking"
-  # context_encoder_info: "ContextCNN_v2"
-  # context_info: "dgm, waypoints, only current timesteps"
-  # state_info: "added goal position and speed limit"
 
 action_adapter:
   max_speed: 10
@@ -17,7 +13,7 @@ PPO:
   learning_rate: 7.5e-5
   ent_coef: 0.01
   target_kl: 0.05
-  seed: 24
+  seed: 1
 
 SAC:
   batch_size: 64

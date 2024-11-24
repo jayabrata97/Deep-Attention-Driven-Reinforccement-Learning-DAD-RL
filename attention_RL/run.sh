@@ -4,7 +4,6 @@ train(){
   python -u train.py "$KEY"
 }
 
-# NO NEED TO MODIFY THE FOLLOWING
 # actiate conda env
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate smarts
@@ -14,7 +13,7 @@ export PYTHONPATH="${PYTHONPATH}:../SMARTS"
 RED=$'\e[0;31m'
 NC=$'\e[0m'
 PYTHON_RETURN=1
-# generate key, prepare json, path=NONE if NONE generate new path
+
 KEY=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 5 | head -n 1) # generate key
 
 crash_count=0
