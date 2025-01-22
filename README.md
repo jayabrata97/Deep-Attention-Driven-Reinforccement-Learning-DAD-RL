@@ -3,7 +3,7 @@
 - **Paper link: [Deep Attention Driven Reinforcement Learning (DAD-RL) for Autonomous Decision-Making in Dynamic Environment](https://ieeexplore.ieee.org/document/10832016)**
 - Further updates are coming soon.
 # Cite this work
-If you find DAD-RL useful in your research, please cite the [paper](https://arxiv.org/abs/2407.08932). In BibTeX format:
+If you find DAD-RL useful in your research, please cite the [paper](https://ieeexplore.ieee.org/document/10832016). In BibTeX format:
 
 ```bibtex
 @INPROCEEDINGS{10832016,
